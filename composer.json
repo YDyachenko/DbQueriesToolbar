@@ -23,6 +23,9 @@
     "autoload": {
         "psr-0": {
             "DbQueriesToolbar": "src/"
-        }
+        },
+        "classmap": [
+            "./Module.php"
+        ]
     }
 }
