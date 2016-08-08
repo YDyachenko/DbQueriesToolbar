@@ -17,7 +17,7 @@ class DbQueriesCollector implements CollectorInterface
     /**
      * @var array
      */
-    protected $profiles = array ();
+    protected $profiles = array();
 
     /**
      * @var int
@@ -36,10 +36,10 @@ class DbQueriesCollector implements CollectorInterface
     public function setProfiler(ProfilerInterface $profiler)
     {
         $this->profiler = $profiler;
-        
+
         return $this;
     }
-    
+
     /**
      * @return bool
      */
@@ -47,7 +47,7 @@ class DbQueriesCollector implements CollectorInterface
     {
         return $this->profiler instanceof ProfilerInterface;
     }
-    
+
     /**
      * @return ProfilerInterface
      */
@@ -88,7 +88,7 @@ class DbQueriesCollector implements CollectorInterface
             $this->totalTime += $profile['elapse'];
         }
     }
-    
+
     /**
      * @return array
      */
