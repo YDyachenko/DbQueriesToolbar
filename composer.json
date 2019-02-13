@@ -1,24 +1,26 @@
 {
     "name": "ydyachenko/db-queries-toolbar",
+    "type": "library",
     "description": "Db toolbar for ZendDeveloperTools",
-    "type": "zf-module",
-    "license": "MIT",
     "keywords": [
         "debug",
         "developer",
-        "zf2",
+        "zf",
         "module",
         "db"
     ],
     "homepage": "https://github.com/YDyachenko/DbQueriesToolbar",
+    "license": "MIT",
     "authors": [
         {
             "name": "Yuriy Dyachenko"
         }
     ],
     "require": {
-        "php": ">=5.3.3",
-        "zendframework/zend-developer-tools": "^1.0.0"
+        "php": "^5.6 || ^7.0",
+        "zendframework/zend-db": ">=2.1.0",
+        "zendframework/zend-developer-tools": "^1.1.0",
+        "zendframework/zend-mvc": "^2.7 || ^3.0.1"
     },
     "autoload": {
         "psr-0": {
