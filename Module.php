@@ -24,8 +24,8 @@ class Module implements ConfigProviderInterface, ServiceProviderInterface, Autol
      */
     public function getServiceConfig()
     {
-        return array (
-            'factories' => array (
+        return  [
+            'factories' => [
                 'dbqueries.toolbar' => function ($sm) {
                     $dbAdapter = $sm->get('Zend\Db\Adapter\Adapter');
 
@@ -37,8 +37,8 @@ class Module implements ConfigProviderInterface, ServiceProviderInterface, Autol
 
                     return $collector;
                 }
-            )
-        );
+            ]
+        ];
     }
 
     /**
@@ -46,13 +46,12 @@ class Module implements ConfigProviderInterface, ServiceProviderInterface, Autol
      */
     public function getAutoloaderConfig()
     {
-        return array (
-            'Zend\Loader\StandardAutoloader' => array (
-                'namespaces' => array (
+        return  [
+            'Zend\Loader\StandardAutoloader' => [
+                'namespaces' => [
                     __NAMESPACE__ => __DIR__ . '/src/' . __NAMESPACE__,
-                ),
-            ),
-        );
+                ],
+            ],
+        ];
     }
-
 }

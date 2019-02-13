@@ -17,7 +17,7 @@ class DbQueriesCollector implements CollectorInterface
     /**
      * @var array
      */
-    protected $profiles = array();
+    protected $profiles = [];
 
     /**
      * @var int
@@ -77,7 +77,7 @@ class DbQueriesCollector implements CollectorInterface
      */
     public function collect(MvcEvent $mvcEvent)
     {
-        if (!$this->hasProfiler()) {
+        if (! $this->hasProfiler()) {
             return;
         }
 
@@ -112,5 +112,4 @@ class DbQueriesCollector implements CollectorInterface
     {
         return $this->totalTime;
     }
-
 }
